@@ -2,7 +2,7 @@ FROM geonode/geonode-base:latest-ubuntu-24.04
 
 # https://specs.opencontainers.org/image-spec/annotations/
 LABEL org.opencontainers.image.title="OpenGeoSGB/GeoNode" \
-    org.opencontainers.image.version="5.0.2" \
+    org.opencontainers.image.version="dev" \
     org.opencontainers.image.authors="GeoNode development team & NDS CPRM"    
 
 RUN apt-get update -y && \

@@ -77,5 +77,3 @@ TEMPLATES[0].pop("APP_DIRS", None)
 PROJECT_FIXTURES = [
     # List project-related fixture files here, in the order they should be loaded.
 ]
-
-
