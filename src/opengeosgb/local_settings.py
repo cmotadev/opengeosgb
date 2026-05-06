@@ -84,3 +84,59 @@ SOCIALACCOUNT_PROFILE_EXTRACTORS = {
 #         'INDEX_NAME': os.getenv("HAYSTACK_ENGINE_INDEX_NAME"),
 #     },
 # }
+
+# PyCSW Custom
+PYCSW["CONFIGURATION"]["metadata"]["inspire"]["enabled"] = False
+
+PYCSW["CONFIGURATION"]["metadata"]["identification"] = {
+    "title": "OpenGeoSGB - Serviços de catálogo",
+    "description": "Catálogo de dados e serviços do Serviço Geológico do Brasil",
+    "keywords": ["sdi", "catalogue", "discovery", "metadata"],
+    "keywords_type": "theme",
+    "fees": "None",
+    "accessconstraints": "None",
+}
+
+PYCSW["CONFIGURATION"]["metadata"]["provider"] = {
+    "name": "Serviço Geológico do Brasil",
+    "url": "https://www.sgb.gov.br",
+}
+
+PYCSW["CONFIGURATION"]["metadata"]["contact"] = {
+    "name": "Carlos Eduardo Miranda Mota",
+    "position": "Pesquisador em Geociências",
+    "address": "Av. Pasteur, 404, Urca",
+    "city": "Rio de Janeiro",
+    "stateorprovince": "RJ",
+    "postalcode": "22240-140",
+    "country": "Brasil",
+    "phone": "+55 21 2546-0320",
+    "fax": "",
+    "email": "carlos.mota@sgb.gov.br",
+    "url": "",
+    "hours": "8:00 - 18:00",
+    "instructions": "Apenas em horas de serviço. Indisponível nos fins de semana.",
+    "role": "pointOfContact",
+}
+
+# CATALOGUE_METADATA_TEMPLATE = "catalogue/full_metadata.xml"
+# CATALOGUE_METADATA_XSL = "/static/metadataxsl/metadata.xsl"
+
+# DOWNLOAD_FORMATS_METADATA = [
+#     # 'Atom', 'DIF', 
+#     'Dublin Core', #'ebRIM', 
+#     'FGDC', 'ISO',
+# ]
+
+# DOWNLOAD_FORMATS_VECTOR = [
+#     'JPEG', 'PDF', 'PNG', 'Zipped Shapefile', 
+#     #'GML 2.0', 'GML 3.1.1', 
+#     # 'CSV',
+#     'Excel', 'GeoJSON', 'KML', 'View in Google Earth', 'Tiles',
+# ]
+
+# DOWNLOAD_FORMATS_RASTER = [
+#     'JPEG', 'PDF', 'PNG' 'Tiles',
+# ]
+
+# https://docs.geonode.org/en/master/basic/settings/index.html#ui-required-fields
