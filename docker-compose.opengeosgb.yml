@@ -40,6 +40,8 @@ services:
     ports:
       - "${HTTP_PORT}:8080"
       - "${HTTPS_PORT}:8443"
+    environment:
+      - RESOLVER=${RESOLVER}
     volumes:
       # - nginx-confd:/etc/nginx
       - nginx-certificates:/geonode-certificates
