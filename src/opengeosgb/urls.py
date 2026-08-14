@@ -18,9 +18,11 @@
 #
 #########################################################################
 
-from django.urls import path, include
+from django.urls import path, re_path, include
 from django.contrib.flatpages.sitemaps import FlatPageSitemap
 from geonode.urls import urlpatterns, sitemaps
+
+from . import views
 
 sitemaps.update(page=FlatPageSitemap)
 
@@ -28,4 +30,7 @@ urlpatterns += [
     # flatpages
     path("pages/", include("django.contrib.flatpages.urls")),
     # path("about-us/", views.flatpage, {"url": "/about-us/"}, name="about"),
+
+    # Rota legada do GeoNode 4 (P3M)
+    re_path(r"^datasets/(?P<layername>[^/]*)/metadata_detail$", views.legacy_metadata_detail, name='dataset_metadata_detail'),
 ]
